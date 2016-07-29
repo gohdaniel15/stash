@@ -48,3 +48,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # these are lydia's gems and this is a comment hahahahahahahaah
+gem 'figaro'
+gem "omniauth-github"
