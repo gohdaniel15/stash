@@ -11,4 +11,11 @@ $(document).ready(function () {
 	})
 
 
+	function fetchArticles() {
+		more_posts_url = "/articles/fetch"
+		$.getScript(more_posts_url)
+	}
+
+	gameStart = setInterval(fetchArticles, 600000);
+
 });

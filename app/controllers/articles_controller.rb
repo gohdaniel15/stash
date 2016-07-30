@@ -26,6 +26,14 @@ class ArticlesController < ApplicationController
  		end
   end
 
+  def fetch
+    
+    
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def article_params

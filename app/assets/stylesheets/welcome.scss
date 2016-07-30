@@ -1,9 +1,10 @@
 $blue: #2196f3;
 $yellow: #ffab40;
 $green: #00e676;
+$background: #f4f4f2;
 
 body {
-	background-color: #f4f4f2;
+	background-color: $background !important;
 }
 
 .navbar {
@@ -14,6 +15,7 @@ body {
 	color: white;
 	width: 100%;
 	height: 8%;	
+	border-radius: 0 !important;
 }
 
 .play-snake {
@@ -53,42 +55,51 @@ body {
 
 .feature-card {
 	background-color: white;
-	width: 25%;
+	width: 30%;
 	height: 70%;
 	top: 30%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position: absolute;
+	overflow-y: auto;
+}
+
+.feature-card-header {
+	width: 30%;
+	height: 10%;
+	position: fixed;
+	z-index: 1;
+}
+
+.feature-card-header-text {
+	position: absolute;
+	top: 20%;
+	font-size: 24px;
+	color: white;	
+}
+
+
+.feature-card-content {
+	position: absolute;
+	top: 20%;
+	left: 10%;
 }
 
 .articles-container {
-	left: 7.5%;
+	left: 2.5%;
 }
 
 .goals-container {
-	left: 37.5%;
+	left: 35%;
 }
 
 .stats-container {
 	left: 67.5%;
 }
 
-.feature-card-header {
-	width: 25%;
-	height: 10%;
-	position: absolute;
-	top: 30%;	
-}
 
-.feature-card-header-text {
-	position: absolute;
-	top: 25%;
-	font-size: 24px;
-	color: white;	
-}
 
 .articles-header {
 	background-color: $yellow;
-	left: 7.5%;
 }
 
 .articles-text {
@@ -97,7 +108,6 @@ body {
 
 .goals-header {
 	background-color: $green;
-	left: 37.5%;
 }
 
 .goals-text {
@@ -106,7 +116,6 @@ body {
 
 .stats-header {
 	background-color: $blue;
-	left: 67.5%;
 }
 
 .stats-text {
