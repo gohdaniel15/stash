@@ -1,0 +1,11 @@
+<h1><%= current_user.goals.where(completion: true, size: "Big").count %></h1>
+<p>Total big goals achieved</p>
+
+<h1><%= current_user.goals.where(completion: true, size: "Medium").count %></h1>
+<p>Total medium goals achieved</p>
+
+<h1><%= current_user.goals.where(completion: true, size: "Small").count %></h1>
+<p>Total small goals achieved</p>
+
+<h1><%= current_user.goals.where(completion: true).count %></h1>
+<p>Total goals achieved</p>

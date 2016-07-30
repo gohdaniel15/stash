@@ -18,9 +18,13 @@ class GoalsController < ApplicationController
   end
 
   def update
-    byebug
-    @goal.completion = true
-    @goal.save
+    if @goal.completion?
+      @goal.completion = false
+      @goal.save
+    else
+      @goal.completion = true
+      @goal.save
+    end
     redirect_to root_path
   end
 
@@ -31,7 +35,7 @@ class GoalsController < ApplicationController
   end
 
   def set_goal
-    @goal = Goal.find_by(params[:goal][:id])
+    @goal = Goal.find(params[:goal][:id])
   end
 
 end

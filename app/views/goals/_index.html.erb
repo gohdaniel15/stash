@@ -1,15 +1,14 @@
-<% @goals.each do |g| %>
+<% @goals.where("created_at >= ?", Time.zone.now.beginning_of_day).each do |g| %>
   <p>
-    <%= g.size %><%= "   " %><%= g.content %><%= " " %>
-    <% byebug %>
     <% if g.completion? %>
-      <%= "Completed" %>
+      <%= g.size %><%= "   " %><%= g.content %>
     <% else %>
-      <%= "Pending" %>
+      <%= g.size %><%= "   " %><%= g.content %>
     <% end %>
   </p>
   <p>
     <%= form_for g, url: goal_path(g.id) do |f| %>
+      <%= f.hidden_field (:id) %>
       <%= f.hidden_field (:completion) %>
       <%= f.submit %>
     <% end %>
