@@ -6,8 +6,12 @@ class UsersController < ApplicationController
       redirect_to sign_in_path
     else
       set_user
+
+      @articles = Article.all
+
       @goals = Goal.all
       @goal = Goal.new
+
     end
 	end
 

@@ -1,0 +1,9 @@
+<%= form_for :article, url: articles_path do |form| %>
+	<%= form.text_field :url, placeholder: 'Article URL' %>
+	<br>
+	<%= form.text_field :title, placeholder: 'Article Title' %>
+	<br>
+	<%= form.text_field :description, placeholder: 'Description' %>
+	<br>
+	<%= form.submit %>
+<% end %>
