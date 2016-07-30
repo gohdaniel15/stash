@@ -1,0 +1,12 @@
+<% @articles.each do |article| %>
+  <div class="article">
+    <p><%= article.title %></p>
+    <p><%= article.description %></p>
+    <p><%= article.url %></p>
+    <% if article.upvotes.where(user_id: current_user.id).exists? && article.upvotes.find_by(user_id: current_user.id).vote == true %>
+    	<%= button_to "Downvote", upvotes_path(article), class: "btn btn-primary" %>
+    <% else %>
+    	<%= button_to "Upvote", upvotes_path(article), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+ <% end %>
