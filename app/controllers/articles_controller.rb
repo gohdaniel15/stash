@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 
   def fetch
     
-    
+
     respond_to do |format|
       format.js
     end

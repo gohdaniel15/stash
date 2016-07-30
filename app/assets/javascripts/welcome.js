@@ -16,6 +16,6 @@ $(document).ready(function () {
 		$.getScript(more_posts_url)
 	}
 
-	gameStart = setInterval(fetchArticles, 600000);
+	fetchStart = setInterval(fetchArticles, 600000);
 
 });
