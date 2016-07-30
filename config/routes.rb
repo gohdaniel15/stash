@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'upvotes/create'
+
+  get 'articles/new'
+
+  get 'articles/create'
+
+  get 'articles/destroy'
+
 	root 'users#welcome'
 
 	get "/auth/github/callback" => "sessions#create"
