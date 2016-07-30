@@ -1,5 +1,7 @@
-$('')
 // if save
-// $('.article-feed').html("<%= escape_javascript")
+$('.article').remove();
+$('#new-article-form').show();
+$('.article-feed').append('<%= j render(@article) %>')
+
 // if error
-$('.flashes').html("<%= escape_javascript(flash[:danger]) %>");
+$('.flashes').html("<%= render 'layouts/flashes' %>");

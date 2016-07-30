@@ -12,17 +12,17 @@ class ArticlesController < ApplicationController
   	@article.user_id = current_user.id
   	if @article.save
   		redirect_to root_url
-  		# respond_to do |format|
-				# format.html { redirect_to root_url }
- 			# 	format.js
- 			# end
+  		respond_to do |format|
+				format.html { redirect_to root_url }
+ 				format.js
+ 			end
  		else
  			flash[:danger] = @article.errors.values.flatten.first
- 			# respond_to do |format|
- 			# 	format.html { redirect_to root_url }
- 			# 	format.js
+ 			respond_to do |format|
+ 				format.html { redirect_to root_url }
+ 				format.js
  			redirect_to root_url
- 			# end
+ 			end
  		end
   end
 
