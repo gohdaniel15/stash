@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 	has_many :articles, dependent: :destroy
 	has_many :upvotes
+	has_many :goals, dependent: :destroy
 
 	def self.create_with_omniauth(auth)
     create! do |user|
@@ -12,4 +13,3 @@ class User < ApplicationRecord
     end
   end
 end
-
