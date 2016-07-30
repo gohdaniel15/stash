@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-	has_secure_password
-
 	def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
