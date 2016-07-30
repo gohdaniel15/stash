@@ -18,6 +18,7 @@ class GoalsController < ApplicationController
   end
 
   def update
+    byebug
     @goal.completion = true
     @goal.save
     redirect_to root_path

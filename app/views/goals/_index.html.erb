@@ -1,6 +1,7 @@
 <% @goals.each do |g| %>
   <p>
     <%= g.size %><%= "   " %><%= g.content %><%= " " %>
+    <% byebug %>
     <% if g.completion? %>
       <%= "Completed" %>
     <% else %>

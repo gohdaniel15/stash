@@ -1,21 +1,14 @@
-
 <div class="flashes">
-
 </div>
 
-<div>
-
 <div class="navbar">
-	<button class="play-snake">
-	STASH
-	</button>
-
+  <button class="play-snake">
+    STASH
+  </button>
   <%= button_to "Log out", sign_out_path, class: "logout-button nav-button", method: :get %>
-
 </div>
 
 <div class="quotes-container">
-
   <%= render "quotes/quotes" %>
 </div>
 
@@ -28,38 +21,27 @@
 
 
 <!-- Articles -->
-
-<div>
-
-	<div class="article-form">
-		<%= render partial: '/articles/form' %>
-	</div>
-	<div class="article-feed">
-		<% @articles.each do |article| %>
-			<div class="article">
-				<p>article.title</p>
-				<p>article.description</p>
-				<p>article.url</p>
-			</div>
-		<% end %>
-	</div>
-
 <div class="articles-container">
-
+  <div class="article-form">
+    <%= render partial: '/articles/form' %>
+  </div>
+  <div class="article-feed">
+    <% @articles.each do |article| %>
+    <div class="article">
+      <p><%= article.title %></p>
+      <p><%= article.description %></p>
+      <p><%= article.url %></p>
+    </div>
+    <% end %>
+  </div>
 </div>
 
 <!-- Goals -->
 
 <div class="goals-container feature-card">
-
-<div>
   <%= render "goals/goals_form" %>
   <%= render "goals/index" %>
-
 </div>
 
 <div class="stats-container feature-card">
-</div>
-
-<div class="flashes">
 </div>
