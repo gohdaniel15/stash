@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def index
+    @articles = Article.all
+  end
+
   def new
   	@article = Article.new
   end
@@ -13,7 +17,7 @@ class ArticlesController < ApplicationController
  			# 	format.js
  			# end
  		else
- 			flash[:danger] = @article.errors.values.first
+ 			flash[:danger] = @article.errors.values.flatten.first
  			# respond_to do |format|
  			# 	format.html { redirect_to root_url }
  			# 	format.js

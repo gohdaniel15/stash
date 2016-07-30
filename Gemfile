@@ -51,3 +51,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'figaro'
 gem 'omniauth'
 gem "omniauth-github"
+gem 'bootstrap-sass', '~> 3.2.0'
