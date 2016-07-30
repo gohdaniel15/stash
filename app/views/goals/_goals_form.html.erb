@@ -1,0 +1,5 @@
+<%= form_for @goal, url: goals_path do |f| %>
+  <%= f.text_field :content, placeholder: "Enter your goal"  %>
+  <%= f.select :size, ["Big", "Medium", "Small"] %>
+  <%= f.submit %>
+<% end %>
