@@ -1,0 +1,95 @@
+body {
+	background-color: #f4f4f2;
+}
+
+.navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #e57373;
+	color: white;
+	width: 100%;
+	height: 8%;	
+}
+
+.play-snake {
+	left: 0;
+	top: 0%;
+	width: 15%;
+	height: 100%;
+	color: white;
+	background-color: #e57373;
+	font-size: 22px;
+	border: 0;
+	position: absolute;
+}
+
+.nav-button {
+	top: 25%;
+	width: 10%;
+	height: 50%;
+	color: white;
+	background-color: #e57373;
+	border: 0;
+	font-size: 16px;
+	position: absolute;
+}
+
+.logout-button {
+	left: 90%;
+}
+
+.quotes-container {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 10%;
+	text-align: center;
+}
+
+.feature-card {
+	background-color: white;
+	width: 25%;
+	height: 70%;
+	top: 25%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+}
+
+.articles-container {
+	position: absolute;
+	top: 25%;
+	left: 7.5%;
+	width: 25%;
+	height: 70%;
+	background-color: white;
+}
+
+.goals-container {
+	left: 37.5%;
+}
+
+.stats-container {
+	left: 67.5%;
+}
+
+
+
+.snake-container {
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+
+.snake-container-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: black;
+	display: none;
+	opacity: 0.75;
+	z-index: 1;
+	left: 0;
+	top: 0;
+}

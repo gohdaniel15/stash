@@ -1,0 +1,16 @@
+<% @goals.each do |g| %>
+  <p>
+    <%= g.size %><%= "   " %><%= g.content %><%= " " %>
+    <% if g.completion? %>
+      <%= "Completed" %>
+    <% else %>
+      <%= "Pending" %>
+    <% end %>
+  </p>
+  <p>
+    <%= form_for g, url: goal_path(g.id) do |f| %>
+      <%= f.hidden_field (:completion) %>
+      <%= f.submit %>
+    <% end %>
+  </p>
+<% end %>
