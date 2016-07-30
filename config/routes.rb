@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/new'
+	root 'users#welcome'
 
-  get 'users/create'
+	get "/auth/:provider/callback" => "sessions#create"
+  get "/signout" => "sessions#destroy", as: "sign_out"
 
-  get 'users/destroy'
-
+  resources :users, only: [:new, :create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
