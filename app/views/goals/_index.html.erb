@@ -1,7 +1,7 @@
-<% @goals.where("created_at >= ?", Time.zone.now.beginning_of_day).each do |g| %>
+<% @goals.where("created_at >= ?", Time.zone.now.beginning_of_day).order("completion ASC").each do |g| %>
   <p>
     <% if g.completion? %>
-      <%= g.size %><%= "   " %><%= g.content %>
+      <strike><%= g.size %><%= "   " %><%= g.content %></strike>
     <% else %>
       <%= g.size %><%= "   " %><%= g.content %>
     <% end %>
