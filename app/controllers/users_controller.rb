@@ -11,7 +11,8 @@ class UsersController < ApplicationController
 
       @goals = Goal.all
       @goal = Goal.new
-      @user_articles = Article.find_by(user_id: current_user.id)
+      @count = 0
+      current_user.articles.each { |a| @count += a.upvotes.where(vote: true).count }
     end
 	end
 
