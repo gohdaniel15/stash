@@ -1,13 +1,26 @@
 class UsersController < ApplicationController
-	def welcome	
+  before_action :set_user, only: [:edit, :update, :destroy]
+
+	def welcome
+    if current_user.nil?
+      redirect_to sign_in_path
+    else
+      set_user
+    end
 	end
 
-  def new
+  def edit
   end
 
-  def create
+  def update
   end
 
   def destroy
+  end
+
+  private
+
+  def set_user
+    @user = current_user
   end
 end
