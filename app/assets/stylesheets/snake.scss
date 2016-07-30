@@ -1,0 +1,102 @@
+#game-box {
+	background-color: black;
+	height: 450px;
+	width: 450px;
+	position: absolute;
+	left: 500px;
+	top: 100px;
+}
+
+.snake {
+	background-color: black;
+	width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.start-game {
+	background-color: #8bc34a;
+	width: 7vw;
+	left: 2vw;
+}
+
+.restart-game {
+	background-color: #7986cb;
+	width: 7vw;
+	left: 2vw;
+}
+
+.food {
+	background-color: black;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+.superfood {
+	background-color: red;
+}
+
+.super-food-timer {
+	display: none;
+}
+
+.start-game {
+	width: 120px;
+	height: 30px;
+	border: 0;
+	background-color: #9ccc65;
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	border-radius: 2px;
+	left: 800px;
+	top: 575px;
+}
+
+.restart-game {
+	width: 120px;
+	height: 30px;
+	border: 0;
+	background-color: #e57373;
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	border-radius: 2px;
+	left: 525px;
+	top: 575px;
+}
+
+.score-board{
+	width: 100px;
+	height: 30px;
+	border: 0;
+	background-color: #7986cb;
+	color: white;
+	font-size: 16px;
+	position: absolute;
+	border-radius: 2px;
+	left: 1000px;
+	top: 100px;
+	text-align: center;
+}
+
+.super-food-timer {
+	width: 100px;
+	height: 30px;
+	border: 0;
+	background-color: #dce775;
+	color: white;
+	font-size: 16px;
+	position: absolute;
+	border-radius: 2px;
+	left: 1000px;
+	top: 400px;
+	text-align: center;
+}
