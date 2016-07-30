@@ -241,7 +241,7 @@ $(document).ready(function() {
 
       // Superfood logic
 
-	  	if (foodCount%2 === 0) {
+	  	if (foodCount%10 === 0) {
 	  		isSuperfood = true;
 	  		superFoodTimer = superFoodValue;
 	  		$('.food').toggleClass("superfood");
@@ -259,7 +259,7 @@ $(document).ready(function() {
   	clearInterval(gameStart);
   	play = false;
   	scoreCount = 0;
-  	$("#score-count").html(scoreCount);
+  	$(".score-count").html(scoreCount);
   	$("#game-box").remove();
   	$(".wrapper").append("<div id=" + "game-box" + ">" + "</div>");
   	$("#game-box").append("<div class=" + "food" + ">" + "</div>");

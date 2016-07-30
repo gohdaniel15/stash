@@ -1,19 +1,35 @@
-<div>
+<div class="navbar">
+	<button class="play-snake">
+	STASH
+	</button>
+
+  <%= button_to "Log out", sign_out_path, class: "logout-button nav-button", method: :get %>
+
+</div>
+
+<div class="quotes-container">
   <%= render "quotes/quotes" %>
 </div>
 
-<div>
+<div class="snake-container">
   <%= render "snake" %>
 </div>
 
+<div class="snake-container-overlay">
+</div>
+
+
 <!-- Articles -->
-<div>
+<div class="articles-container">
 </div>
 
 <!-- Goals -->
-<div>
+<div class="goals-container feature-card">
 </div>
 
-<div>
-  <%= link_to "Log out", sign_out_path %>
+<div class="stats-container feature-card">
 </div>
+
+<div class="flashes">
+</div>
+
