@@ -21,7 +21,8 @@
 
 
 <!-- Articles -->
-<div class="articles-container">
+
+<div class="articles-container feature-card">
   <div class="article-form">
     <%= render partial: '/articles/form' %>
   </div>
@@ -36,6 +37,11 @@
   </div>
 </div>
 
+<div class="articles-header feature-card-header">
+	<span class="articles-text feature-card-header-text"> Resources </span>
+</div>
+
+
 <!-- Goals -->
 
 <div class="goals-container feature-card">
@@ -43,6 +49,17 @@
   <%= render "goals/index" %>
 </div>
 
+<div class="goals-header feature-card-header">
+	<span class="goals-text feature-card-header-text"> Goals </span>
+</div>
+
+
+<!-- Stats -->
+
 <div class="stats-container feature-card">
   <%= render "/stats/index" %>
+</div>
+
+<div class="stats-header feature-card-header">
+	<span class="stats-text feature-card-header-text"> Stats </span>
 </div>

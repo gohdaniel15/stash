@@ -1,3 +1,7 @@
+$blue: #2196f3;
+$yellow: #ffab40;
+$green: #00e676;
+
 body {
 	background-color: #f4f4f2;
 }
@@ -51,18 +55,13 @@ body {
 	background-color: white;
 	width: 25%;
 	height: 70%;
-	top: 25%;
+	top: 30%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position: absolute;
 }
 
 .articles-container {
-	position: absolute;
-	top: 25%;
 	left: 7.5%;
-	width: 25%;
-	height: 70%;
-	background-color: white;
 }
 
 .goals-container {
@@ -73,7 +72,46 @@ body {
 	left: 67.5%;
 }
 
+.feature-card-header {
+	width: 25%;
+	height: 10%;
+	position: absolute;
+	top: 30%;	
+}
 
+.feature-card-header-text {
+	position: absolute;
+	top: 25%;
+	font-size: 24px;
+	color: white;	
+}
+
+.articles-header {
+	background-color: $yellow;
+	left: 7.5%;
+}
+
+.articles-text {
+	left: 35%;
+}
+
+.goals-header {
+	background-color: $green;
+	left: 37.5%;
+}
+
+.goals-text {
+	left: 40%;
+}
+
+.stats-header {
+	background-color: $blue;
+	left: 67.5%;
+}
+
+.stats-text {
+	left: 42%;
+}
 
 .snake-container {
 	display: none;
