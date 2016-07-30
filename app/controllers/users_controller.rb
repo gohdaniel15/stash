@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       redirect_to sign_in_path
     else
       set_user
+      @articles = Article.all
     end
 	end
 
