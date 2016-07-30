@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
       @articles = Article.all
 
-      @goals = Goal.all
+      @goals = current_user.goals.all
       @goal = Goal.new
       @count = 0
       current_user.articles.each { |a| @count += a.upvotes.where(vote: true).count }
