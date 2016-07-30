@@ -1,4 +1,4 @@
-<h1><%= current_user.goals.where(completion: true, size: "Big").count %></h1>
+<!-- <h1><%= current_user.goals.where(completion: true, size: "Big").count %></h1>
 <p>Total big goals achieved</p>
 
 <h1><%= current_user.goals.where(completion: true, size: "Medium").count %></h1>
@@ -8,4 +8,15 @@
 <p>Total small goals achieved</p>
 
 <h1><%= current_user.goals.where(completion: true).count %></h1>
-<p>Total goals achieved</p>
+<p>Total goals achieved</p> -->
+
+<h1><%= (current_user.goals.where(completion: true).count.to_f)/([current_user.created_at.beginning_of_day..Date.today.end_of_day].count) %></h1>
+<p>Avg number of goals achieved per day</p>
+
+
+<h1><%= current_user.articles.count %></h1>
+<p>Total number of articles shared</p>
+
+
+<h1><%= @user_articles.upvotes.count %></h1>
+<p>Total number of upvotes received for articles</p>

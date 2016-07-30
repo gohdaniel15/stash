@@ -31,10 +31,31 @@
   	<%= link_to "Post an Article", new_article_path, id: "new_article", remote: true %>
   </div>
   <div class="article-feed">
-  	<%= render 'articles/index' %> 
+  	<%= render 'articles/index' %>
   </div>
 </div>
 
+
+
+
+<div class="articles-container feature-card">
+
+	<div class="articles-header feature-card-header">
+		<span class="articles-text feature-card-header-text"> Resources </span>
+	</div>
+
+	<div class="feature-card-content">
+
+	  <div class="article-form">
+	    <%= render partial: '/articles/form' %>
+	  </div>
+	  <div class="article-feed">
+	  	<%= render 'articles/index' %>
+ 		</div>
+
+ 	</div>
+
+</div>
 
 
 
@@ -52,14 +73,24 @@
 <!-- <div class="goals-header feature-card-header">
 	<span class="goals-text feature-card-header-text"> Goals </span>
 </div> -->
+	<div class="goals-header feature-card-header">
+		<span class="goals-text feature-card-header-text"> Goals </span>
+	</div>
+
+	<div class="feature-card-content">
+	  <%= render "goals/goals_form" %>
+	  <%= render "goals/index" %>
+	</div>
+</div>
 
 
 <!-- Stats -->
 
 <div class="stats-container feature-card">
-  <%= render "/stats/index" %>
-</div>
-
-<div class="stats-header feature-card-header">
-	<span class="stats-text feature-card-header-text"> Stats </span>
+	<div class="stats-header feature-card-header">
+		<span class="stats-text feature-card-header-text"> Stats </span>
+	</div>
+	<div class="feature-card-content">
+  	<%= render "/stats/index" %>
+  </div>
 </div>

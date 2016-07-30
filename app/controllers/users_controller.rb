@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
       @goals = Goal.all
       @goal = Goal.new
-
+      @user_articles = Article.find_by(user_id: current_user.id)
     end
 	end
 
