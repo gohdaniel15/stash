@@ -1,4 +1,5 @@
-<%= form_for :article, url: articles_path, class: "new-article-form", remote: true do |form| %>
+<div id="new-article-form">
+<%= form_for :article, url: articles_path, remote: true do |form| %>
 	<%= form.text_field :url, placeholder: 'Article URL' %>
 	<br>
 	<%= form.text_field :title, placeholder: 'Article Title' %>
@@ -7,3 +8,4 @@
 	<br>
 	<%= form.submit %>
 <% end %>
+</div>

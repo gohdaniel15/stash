@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730054226) do
+ActiveRecord::Schema.define(version: 20160801063316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,17 +30,17 @@ ActiveRecord::Schema.define(version: 20160730054226) do
     t.integer  "user_id"
     t.string   "content"
     t.string   "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "completion"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "completion", default: false
   end
 
   create_table "upvotes", force: :cascade do |t|
     t.integer  "article_id"
     t.integer  "user_id"
-    t.boolean  "vote"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "vote",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|

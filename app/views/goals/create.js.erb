@@ -1,1 +1,2 @@
-$('.goals-feed').append('<%= j render(@goal) %>')
+$('form').trigger("reset");
+$('.goal-feed').prepend("<%= j render 'goals/goals', g: @goal %>");
