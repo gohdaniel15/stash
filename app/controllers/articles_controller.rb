@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    render partial: "index"
   end
 
   def new
@@ -25,13 +26,7 @@ class ArticlesController < ApplicationController
  		end
   end
 
-  def fetch
-    
-
-    respond_to do |format|
-      format.js
-    end
-  end
+  
 
   private
 

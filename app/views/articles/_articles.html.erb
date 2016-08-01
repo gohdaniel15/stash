@@ -4,9 +4,9 @@
     <p><%= article.description %></p>
     <p><a href="<%= article.url %>" target="_blank"><%= article.url %></a></p>
     <% if article.upvotes.where(user_id: current_user.id).exists? && article.upvotes.find_by(user_id: current_user.id).vote == true %>
-    	<%= button_to "#{article.positive_votes.count} Downvote", upvotes_path(article_id: article), id: "vote-button-#{article.id}", class: "downvote btn btn-danger", remote: true %>
+    	<%= button_to "#{article.positive_votes_count} Downvote", upvotes_path(article_id: article), id: "vote-button-#{article.id}", class: "downvote btn btn-danger", remote: true %>
     <% else %>
-    	<%= button_to "#{article.positive_votes.count} Upvote", upvotes_path(article_id: article), id: "vote-button-#{article.id}", class: "upvote btn btn-primary", remote: true %>
+    	<%= button_to "#{article.positive_votes_count} Upvote", upvotes_path(article_id: article), id: "vote-button-#{article.id}", class: "upvote btn btn-primary", remote: true %>
     <% end %>
 </div>
 

@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       @goal = Goal.new
 
       # Goals Count
-      @goals_count = (current_user.goals.where(completion: true).count.to_f)/([current_user.created_at.beginning_of_day..Date.today.end_of_day].count)
+      @goals_count = ((current_user.goals.where(completion: true).count.to_f)/(((current_user.created_at.to_date)..(Date.today)).to_a.count)).round(1)
 
       # Articles Count
       @user_articles = current_user.articles.count
