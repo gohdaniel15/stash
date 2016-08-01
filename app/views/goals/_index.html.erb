@@ -1,16 +1,3 @@
-<% @goals.where("created_at >= ?", Time.zone.now.beginning_of_day).order("completion ASC").each do |g| %>
-  <p>
-    <% if g.completion? %>
-      <strike><%= g.size %><%= "   " %><%= g.content %></strike>
-    <% else %>
-      <%= g.size %><%= "   " %><%= g.content %>
-    <% end %>
-  </p>
-  <p>
-    <%= form_for g, url: goal_path(g.id) do |f| %>
-      <%= f.hidden_field (:id) %>
-      <%= f.hidden_field (:completion) %>
-      <%= f.submit %>
-    <% end %>
-  </p>
+<% @goals.where("created_at >= ?", Time.zone.now.beginning_of_day).order("completion ASC, updated_at DESC").each do |g| %>
+  <%= render 'goals/goals', g: g %>
 <% end %>

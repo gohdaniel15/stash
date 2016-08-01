@@ -9,7 +9,6 @@ class GoalsController < ApplicationController
     @goal.user_id = current_user.id
     @goal.content = params[:goal][:content]
     @goal.size = params[:goal][:size]
-    @goal.completion = false
     @goal.save
     respond_to do |format|
       format.html { redirect_to root_path }
@@ -18,17 +17,20 @@ class GoalsController < ApplicationController
   end
 
   def index
+    @goals = Goal.all
+    render partial: "index", locals: {:@goals => @goals}
   end
 
   def update
-    if @goal.completion?
-      @goal.completion = false
-      @goal.save
-    else
-      @goal.completion = true
-      @goal.save
+    @goal.toggle(:completion)
+    @goal.save
+
+    @goals_count = (current_user.goals.where(completion: true).count.to_f)/([current_user.created_at.beginning_of_day..Date.today.end_of_day].count)
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js
     end
-    redirect_to root_path
   end
 
   private

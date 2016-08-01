@@ -1,0 +1,10 @@
+$('#u-count-number').text('<%= @count %>');
+
+<% if @vote.vote? %>
+  $('#vote-button-<%= @vote.article.id %>').attr('class', 'btn btn-danger'); 
+  $('#vote-button-<%= @vote.article.id %>').val('<%= j @positive + " Downvote" %>');
+<% else %>
+	$('#vote-button-<%= @vote.article.id %>').attr('class', 'btn btn-primary');
+  $('#vote-button-<%= @vote.article.id %>').val('<%= j @positive + " Upvote" %>');
+
+<% end %>

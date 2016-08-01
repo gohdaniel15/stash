@@ -6,7 +6,7 @@
 </div>
 
 <div class="flashes">
-	<%= render 'users/flashes' %>
+	<%= render 'layouts/flashes' %>
 </div>
 
 <div class="quotes-container">
@@ -72,6 +72,16 @@
 		<span class="stats-text feature-card-header-text"> Stats </span>
 	</div>
 	<div class="feature-card-content">
-  	<%= render "/stats/index" %>
+  	<div class="goals-count">
+      <%= render 'goals/goals_count' %> 
+    </div>
+
+    <div class="articles-count">
+      <%= render 'articles/articles_count' %>
+    </div>
+
+    <div class="upvotes-count">
+      <%= render 'upvotes/upvotes_count' %>
+    </div>
   </div>
 </div>

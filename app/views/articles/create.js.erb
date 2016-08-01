@@ -1,7 +1,12 @@
 // if save
-$('.article').remove();
-$('#new-article-form').show();
-$('.article-feed').append('<%= j render(@article) %>')
-
+<%if @article.save %>
+	$('#new-article-form').remove();
+	$('#new_article').show();
+	$('.article-feed').prepend("<%= j render 'articles/articles', article: @article %>");
+<%else%>
 // if error
-$('.flashes').html("<%= render 'layouts/flashes' %>");
+	$('.flashes').html("<%= j render 'layouts/flashes' %>");
+<%end%>
+
+// update articles count
+$('#a-count-number').text("<%= @user_articles %>")

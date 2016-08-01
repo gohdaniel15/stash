@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   	@article = Article.new(article_params)
   	@article.user_id = current_user.id
   	if @article.save
-  		redirect_to root_url
+      @user_articles = current_user.articles.count
   		respond_to do |format|
 				format.html { redirect_to root_url }
  				format.js
@@ -21,7 +21,6 @@ class ArticlesController < ApplicationController
  			respond_to do |format|
  				format.html { redirect_to root_url }
  				format.js
- 			redirect_to root_url
  			end
  		end
   end

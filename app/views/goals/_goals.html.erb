@@ -1,0 +1,14 @@
+<div class="g-completion">
+  <% if g.completion? %>
+    <strike><%= g.size %><%= "   " %><%= g.content %></strike>
+  <% else %>
+      <%= g.size %><%= "   " %><%= g.content %>
+  <% end %>
+</div>
+<p>
+  <%= form_for g, url: goal_path(g.id), remote: true do |f| %>
+    <%= f.hidden_field (:id) %>
+    <%= f.hidden_field (:completion) %>
+    <%= f.submit %>
+  <% end %>
+</p>
