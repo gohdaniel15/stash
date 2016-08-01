@@ -1,3 +1,6 @@
-<% @articles.each do |article| %>
+<% Article.sort_positive_votes.each do |article| %>
+  <%= render 'articles/articles', article: article %>
+<% end %>
+<% Article.sort_negative_votes.each do |article| %>
   <%= render 'articles/articles', article: article %>
 <% end %>

@@ -11,11 +11,11 @@ $(document).ready(function () {
 	})
 
 
-	function fetchArticles() {
-		more_posts_url = "/articles/fetch"
-		$.getScript(more_posts_url)
-	}
+	// function fetchArticles() {
+	// 	more_posts_url = "/articles"
+	// 	$('.article-feed').load(more_posts_url)
+	// }
 
-	fetchStart = setInterval(fetchArticles, 600000);
+	// fetchStart = setInterval(fetchArticles, 10000);
 
 });

@@ -17,7 +17,7 @@ class GoalsController < ApplicationController
   end
 
   def index
-    @goals = Goal.all
+    @goals = current_user.goals
     render partial: "index", locals: {:@goals => @goals}
   end
 
@@ -25,7 +25,7 @@ class GoalsController < ApplicationController
     @goal.toggle(:completion)
     @goal.save
 
-    @goals_count = (current_user.goals.where(completion: true).count.to_f)/([current_user.created_at.beginning_of_day..Date.today.end_of_day].count)
+    @goals_count = ((current_user.goals.where(completion: true).count.to_f)/(((current_user.created_at.to_date)..(Date.today)).to_a.count)).round(1)
 
     respond_to do |format|
       format.html { redirect_to root_path }
