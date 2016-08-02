@@ -1,3 +1,43 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-background {
+	background-color: white;
+}
+
+#sign-in-button {
+	background-color: #444;
+	color: white;
+	border-radius: 8px;
+	position:fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -9em; /*set to a negative number 1/2 of your height*/
+  margin-left: -15em;
+}
+
+#sign-in-button:hover {
+	background-color: #333;
+}
+
+#fa-github {
+	font-size: 50px;
+	margin:auto;
+	position: relative;
+	float:left;
+	border-right: 3px solid rgba(0,0,0,0.2);
+	padding-right: 20px;
+}
+
+#text {
+	color: white;
+	font-size: 35px;
+	margin-left: 20px;
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#text:hover, #text:visited, #text:active {
+	text-decoration: none;
+}
