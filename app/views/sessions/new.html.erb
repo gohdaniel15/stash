@@ -1,1 +1,6 @@
-<%= link_to "Sign in with Github", "/auth/github" %>
+<div class="login-background">
+	<button class="btn btn-large" id="sign-in-button">
+		<i class="fa fa-github" id="fa-github" aria-hidden="true"></i>
+		<%= link_to "Sign in with Github", "/auth/github", id: "text"%>
+	</button>
+</div>
